@@ -1,6 +1,7 @@
-package Dobble.game;
+package main.java.Dobble.game;
 
-import Dobble.cardsSet.Card;
+
+import main.java.Dobble.cardsSet.Card;
 
 import java.util.List;
 

@@ -1,4 +1,0 @@
-rootProject.name = 'LabJava2022-1'
-include 'src:GUI'
-findProject(':src:GUI')?.name = 'GUI'
-

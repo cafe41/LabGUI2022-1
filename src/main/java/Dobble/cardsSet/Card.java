@@ -1,4 +1,4 @@
-package Dobble.cardsSet;
+package main.java.Dobble.cardsSet;
 
 import java.util.ArrayList;
 import java.util.List;

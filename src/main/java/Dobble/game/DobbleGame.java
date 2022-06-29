@@ -1,6 +1,8 @@
-package Dobble.game;
+package main.java.Dobble.game;
 
-import Dobble.cardsSet.Dobble;
+
+
+import main.java.Dobble.cardsSet.Dobble;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -133,7 +135,7 @@ public class DobbleGame {
         setModoDeJuego("Modo Demo");
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("ss");
         while (getMazoCartas().getCardsSet().size() > 2){
-            int inicioTurno = Integer.valueOf(formato.format(LocalDateTime.now()));
+            int inicioTurno = Integer.parseInt(formato.format(LocalDateTime.now()));
             int finTurno = inicioTurno + 3;
             //Para no caer en turnos infinitos:
             while (inicioTurno > 57){inicioTurno = inicioTurno - 1;}
@@ -143,7 +145,7 @@ public class DobbleGame {
                     "\n\nSeleccione dos cartas en base a su posición y un elemento en común\n" +
                     "Ejemplo: 0 1 78");
             while (inicioTurno < finTurno) { //El tiempo avanza hasta que pasen 3 seg.
-                inicioTurno = Integer.valueOf(formato.format(LocalDateTime.now()));}
+                inicioTurno = Integer.parseInt(formato.format(LocalDateTime.now()));}
             if (getTurnoActual() == 0 || getTurnoActual() == 1){
                 Random numeroRandom = new Random();
                 int posC1 = numeroRandom.nextInt(getMazoCartas().getCardsSet().size());

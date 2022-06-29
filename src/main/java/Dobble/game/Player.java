@@ -1,6 +1,6 @@
-package Dobble.game;
+package main.java.Dobble.game;
 
-import Dobble.cardsSet.Card;
+import main.java.Dobble.cardsSet.Card;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ public interface Player {
     void agregarPuntaje(int agregado);
 
     //Getters
-    public String getUser();
-    public int getNumeroJugador();
-    public boolean isCPU();
-    public int getPuntaje();
-    public List<Card> getMano();
+    String getUser();
+    int getNumeroJugador();
+    boolean isCPU();
+    int getPuntaje();
+    List<Card> getMano();
 }

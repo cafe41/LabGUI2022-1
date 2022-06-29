@@ -1,10 +1,10 @@
-package Dobble;
+package main.java.Dobble;
 
-import Dobble.cardsSet.Card;
-import Dobble.cardsSet.Dobble;
-import Dobble.game.CPU;
-import Dobble.game.DobbleGame;
-import Dobble.game.Humano;
+import main.java.Dobble.cardsSet.Card;
+import main.java.Dobble.game.Humano;
+import main.java.Dobble.cardsSet.Dobble;
+import main.java.Dobble.game.CPU;
+import main.java.Dobble.game.DobbleGame;
 
 import java.util.*;
 
@@ -78,7 +78,7 @@ public class Menu {
     }
 
     //menuJugar
-    private DobbleGame menuJugar(DobbleGame game) {
+    private void menuJugar(DobbleGame game) {
         System.out.print("\n" + "----------Menú Jugar----------" + "\n" +
                 "Bienvenido al menú para jugar el juego." +
                 "\n\n" + "Los jugadores son: " + game.getNombreJugadores() +
@@ -99,9 +99,8 @@ public class Menu {
             optionMultiPlayer(game);
         }
         else {System.out.println("\nPor favor, consiga una cantidad válida de jugadores.\n");}
-        return game;
     }
-    private DobbleGame optionDemoMode(DobbleGame game){
+    private void optionDemoMode(DobbleGame game){
         //Reiniciamos election
         election = 99;
         System.out.println("Seleccione el modo de juego:");
@@ -129,9 +128,8 @@ public class Menu {
                         "Seleccione un modo de juego si desea volver a jugar:");
             }
         }
-        return game;
     }
-    private DobbleGame optionSinglePlayer(DobbleGame game){
+    private void optionSinglePlayer(DobbleGame game){
         // si jugadores.size() = 1:
             //Ofrecer modo vs. ia
                 //Se agregará una IA a la lista de jugadores
@@ -145,9 +143,8 @@ public class Menu {
         System.out.println("\nWIP. Solo funciona el modo \"Demo\", el cual es CPU vs CPU" +
                 " y solo se ejecuta si no hay jugadores.\n" +
                 "Por favor, borre los jugadores si desea probar el juego.");
-        return game;
     }
-    private DobbleGame optionMultiPlayer(DobbleGame game){
+    private void optionMultiPlayer(DobbleGame game){
         //Si jugadoresHumanos > 1 & cpu = 0
             //Si jugadoresHumanos = 2
                 //Ofrecer modo Competitivo (PvP)
@@ -165,11 +162,10 @@ public class Menu {
         System.out.println("\nWIP. Solo funciona el modo \"Demo\", el cual es CPU vs CPU" +
                 " y solo se ejecuta si no hay jugadores.\n" +
                 "Por favor, borre los jugadores si desea probar el juego.");
-        return game;
     }
 
     //menuMazoDeCartas
-    private DobbleGame menuMazoDeCartas(DobbleGame game) {
+    private void menuMazoDeCartas(DobbleGame game) {
         election = 99; //reiniciamos, en caso de que vengamos de un sub-menu y election = 0
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Menú Cartas----------" + "\n" +
@@ -234,10 +230,9 @@ public class Menu {
             }
             else {System.out.print("\nNo ha ingresado una opción válida.\n");}
         }
-        return game;
     }
     //crearMazo
-    private DobbleGame optionCrearMazo(DobbleGame game){
+    private void optionCrearMazo(DobbleGame game){
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("-Bienvenido al programa para crear cartas-");
 
@@ -288,10 +283,9 @@ public class Menu {
         System.out.println("El Dobble creado es:" + setCartas);
         game.setMazoCartas(setCartas);
         game.setMazoIdeal(setOriginal);
-        return game;
     }
     //agregarCartas
-    private DobbleGame optionAgregarCartas(DobbleGame game){
+    private void optionAgregarCartas(DobbleGame game){
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("-Bienvenido al programa para quitar cartas del mazo-\n");
         List<Card> cartasFaltantes = game.getMazoCartas().missingCards(
@@ -300,38 +294,34 @@ public class Menu {
                 cartasFaltantes + "\n\n" + "Ingrese el índice de la carta que desea agregar" +
                 "\n(Ej: [[0], [1] , [2], ...]): ");
         game.getMazoCartas().getCardsSet().add(cartasFaltantes.get(entradaEscaner.nextInt()));
-        return game;
     }
     //quitarCartas, método que quita cartas del mazo
-    private DobbleGame optionQuitarCartas(DobbleGame game){
+    private void optionQuitarCartas(DobbleGame game){
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("-Bienvenido al programa para quitar cartas del mazo-\n");
         System.out.print("El mazo actual es: " + game.getMazoCartas().getCardsSet() +
                 "\nElija qué carta quiere quitar del mazo con su índice" +
                 "\n(Ej: [[0], [1] , [2], ...]): ");
         game.getMazoCartas().getCardsSet().remove(entradaEscaner.nextInt());
-        return game;
     }
     //verificarSet, verifica que el set de cartas sea válido
-    private DobbleGame optionVerificarSet(DobbleGame game){
+    private void optionVerificarSet(DobbleGame game){
         System.out.println("-Bienvenido al programa para verificar que el mazo es válido-\n");
         //Verificamos que el set de cartas sea válido
         game.getMazoCartas().dobbleValido();
-        return game;
     }
     //cartasFaltantes, ejecuta missingCards, quien muestra las cartas faltantes en el mazo
-    private DobbleGame optionCartasFaltantes(DobbleGame game){
+    private void optionCartasFaltantes(DobbleGame game){
         System.out.println("-Bienvenido al programa para ver qué cartas faltan en el mazo-\n");
         List<Card> cartasPerdidas = game.getMazoCartas().missingCards(
                 game.getMazoIdeal());
                 //Se le aplica un missingCards al mazo actual, en base al mazo ideal
         System.out.println("\nLas cartas que faltan son "+ cartasPerdidas.size() + ": " +
                 cartasPerdidas + "\n");
-        return game;
     }
 
     //menuJugador
-    private DobbleGame menuJugador(DobbleGame game) {
+    private void menuJugador(DobbleGame game) {
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Menú Jugadores----------" + "\n" +
                 "Bienvenido al menú para agregar un jugador");
@@ -356,10 +346,9 @@ public class Menu {
             }
             else {System.out.println("\nNo ha ingresado una opción válida.\n");}
         }
-        return game;
     }
     //optionAgregarJugador
-    private DobbleGame optionAgregarJugador(DobbleGame game){
+    private void optionAgregarJugador(DobbleGame game){
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Agregar un jugador----------" + "\n" +
                 "Bienvenido al menú para agregar un jugador.");
@@ -370,10 +359,9 @@ public class Menu {
             System.out.println("Se ha agregado al jugador " + jugadorNuevo.getUser() +
                     " a la lista de jugadores\n");
         }
-        return game;
     }
     //optionEliminarJugador
-    private DobbleGame optionEliminarJugador(DobbleGame game) {
+    private void optionEliminarJugador(DobbleGame game) {
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Eliminar un jugador----------" + "\n" +
                 "Bienvenido al menú para eliminar un jugador.");
@@ -407,11 +395,10 @@ public class Menu {
                 else {System.out.println("\nNo ha ingresado una opción válida.\n");}
             }
         }
-        return game;
     }
 
     //menuEstado
-    private DobbleGame menuEstado(DobbleGame game) {
+    private void menuEstado(DobbleGame game) {
         election = 99; //reiniciamos, en caso de que vengamos de un sub-menu y election = 0
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Menú Estado----------" + "\n" +
@@ -447,10 +434,9 @@ public class Menu {
             }
             else {System.out.println("\nNo ha ingresado una opción válida.\n");}
         }
-        return game;
     }
     //optionEstadoJugadores
-    private DobbleGame optionEstadoJugadores(DobbleGame game){
+    private void optionEstadoJugadores(DobbleGame game){
         Scanner entradaEscaner = new Scanner(System.in);
         System.out.println("\n" + "----------Estado de los jugadores----------" + "\n" +
                 "Bienvenido al menú para revisar el estado de los jugadores.");
@@ -473,10 +459,9 @@ public class Menu {
             }
             else {System.out.println("\nNo ha ingresado una opción válida.\n");}
         }
-        return game;
     }
     //optionEstadoPartida
-    private DobbleGame optionEstadoPartida(DobbleGame game){
+    private void optionEstadoPartida(DobbleGame game){
         System.out.println("\n" + "----------Estado de la Partida----------" + "\n");
         if(game.getJugadores().size() == 0){
             System.out.println("No hay jugadores.\n");
@@ -494,6 +479,5 @@ public class Menu {
                     "\n" + game.vaGanando() + " va ganando con " + game.puntajeMayor() + " puntos." +
                     "\nEl modo de juego es: " + game.getModoDeJuego() + ".\n");
         }
-        return game;
     }
 }

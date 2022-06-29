@@ -1,37 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.MainMenu">
-  <grid id="27dc6" binding="panelPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.GUI.MainMenu">
+  <grid id="27dc6" binding="panelPrincipal" layout-manager="GridLayoutManager" row-count="11" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="58" y="20" width="800" height="600"/>
+      <xy x="0" y="0" width="800" height="600"/>
     </constraints>
     <properties>
       <background color="-16777216"/>
       <maximumSize width="3840" height="2160"/>
       <minimumSize width="800" height="600"/>
       <opaque value="true"/>
-      <preferredSize width="1280" height="720"/>
+      <preferredSize width="800" height="600"/>
     </properties>
-    <border type="none"/>
+    <border type="none">
+      <font/>
+    </border>
     <children>
-      <component id="a8b79" class="javax.swing.JLabel" binding="backgroundLabel">
+      <component id="b6a84" class="javax.swing.JButton" binding="estadoActualButton" default-binding="true">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="1" use-parent-layout="false">
-            <minimum-size width="800" height="600"/>
-            <preferred-size width="1280" height="720"/>
-            <maximum-size width="3840" height="2160"/>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+            <maximum-size width="170" height="30"/>
           </grid>
         </constraints>
         <properties>
-          <autoscrolls value="true"/>
-          <background color="-16777216"/>
-          <icon value="GUI/JPG/MainBackgroundVer1.jpg"/>
-          <text value="Label"/>
+          <text value="Estado actual"/>
         </properties>
-        <clientProperties>
-          <html.disable class="java.lang.Boolean" value="true"/>
-        </clientProperties>
       </component>
+      <component id="c4a2a" class="javax.swing.JLabel" binding="fondoDerecho">
+        <constraints>
+          <grid row="0" column="2" row-span="11" col-span="1" vsize-policy="1" hsize-policy="6" anchor="4" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="529" height="601"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/529x601 fondo derecho.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2aded" class="javax.swing.JButton" binding="jugarButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+            <maximum-size width="170" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Jugar"/>
+        </properties>
+      </component>
+      <component id="afd42" class="javax.swing.JButton" binding="agregarJugadoresButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+            <maximum-size width="170" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="11"/>
+          <text value="Agregar jugadores"/>
+        </properties>
+      </component>
+      <component id="169a8" class="javax.swing.JButton" binding="crearMazoButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+            <maximum-size width="170" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Crear mazo"/>
+        </properties>
+      </component>
+      <vspacer id="c6c6a">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="200"/>
+            <preferred-size width="-1" height="250"/>
+            <maximum-size width="-1" height="250"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <component id="b04a0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="11" col-span="1" vsize-policy="1" hsize-policy="6" anchor="8" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="99" height="601"/>
+            <maximum-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/99x601 fondo izquierdo.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="464af">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+            <maximum-size width="-1" height="150"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="49a41">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="150"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="9c170">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="150"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="4b23d">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="ecfd3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1247233"/>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <text value="Menú principal"/>
+        </properties>
+      </component>
+      <vspacer id="9c5b">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="150"/>
+          </grid>
+        </constraints>
+      </vspacer>
     </children>
   </grid>
 </form>
