@@ -8,52 +8,52 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="7c79d" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="7c79d" class="javax.swing.JButton" binding="modoContrarrelojPvPButton" default-binding="true">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo Contrarreloj PvP"/>
         </properties>
       </component>
-      <component id="4d37b" class="javax.swing.JButton" binding="button2" default-binding="true">
+      <component id="4d37b" class="javax.swing.JButton" binding="modoCooperativoVsIAButton" default-binding="true">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo Cooperativo vs IA"/>
         </properties>
       </component>
-      <component id="cb240" class="javax.swing.JButton" binding="button3" default-binding="true">
+      <component id="cb240" class="javax.swing.JButton" binding="modoCompetitivoPvPButton" default-binding="true">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo Competitivo PvP"/>
         </properties>
       </component>
-      <component id="3df5c" class="javax.swing.JButton" binding="button4" default-binding="true">
+      <component id="3df5c" class="javax.swing.JButton" binding="modoContrarrelojButton" default-binding="true">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo contrarreloj"/>
         </properties>
       </component>
-      <component id="41b1a" class="javax.swing.JButton" binding="button5" default-binding="true">
+      <component id="41b1a" class="javax.swing.JButton" binding="modoVsIAButton" default-binding="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo vs IA"/>
         </properties>
       </component>
-      <component id="b057b" class="javax.swing.JButton" binding="button6" default-binding="true">
+      <component id="b057b" class="javax.swing.JButton" binding="modoDePruebaButton" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Modo de Prueba"/>
         </properties>
       </component>
       <component id="b7f5a" class="javax.swing.JLabel" binding="texto1">

@@ -10,6 +10,7 @@ public class MainMenu extends JFrame {
     private JButton agregarJugadoresButton;
     private JButton crearMazoButton;
     private JLabel fondoDerecho;
+    private JLabel fondoIzquierdo;
 
     //Constructor
     public MainMenu(String title) {
