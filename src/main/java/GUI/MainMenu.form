@@ -73,15 +73,6 @@
           <text value="Mazo"/>
         </properties>
       </component>
-      <vspacer id="c6c6a">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="200"/>
-            <preferred-size width="-1" height="250"/>
-            <maximum-size width="-1" height="250"/>
-          </grid>
-        </constraints>
-      </vspacer>
       <vspacer id="464af">
         <constraints>
           <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
@@ -140,6 +131,15 @@
           <text value=""/>
         </properties>
       </component>
+      <vspacer id="c6c6a">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="200"/>
+            <preferred-size width="-1" height="250"/>
+            <maximum-size width="-1" height="250"/>
+          </grid>
+        </constraints>
+      </vspacer>
     </children>
   </grid>
 </form>
