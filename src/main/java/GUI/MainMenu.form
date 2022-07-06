@@ -59,7 +59,7 @@
         </constraints>
         <properties>
           <horizontalTextPosition value="11"/>
-          <text value="Agregar jugadores"/>
+          <text value="Jugadores"/>
         </properties>
       </component>
       <component id="169a8" class="javax.swing.JButton" binding="crearMazoButton" default-binding="true">
@@ -70,7 +70,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Crear mazo"/>
+          <text value="Mazo"/>
         </properties>
       </component>
       <vspacer id="c6c6a">

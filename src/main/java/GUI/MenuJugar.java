@@ -11,12 +11,16 @@ public class MenuJugar extends JFrame{
     private JButton modoVsIAButton;
     private JButton modoDePruebaButton;
     private JLabel texto1;
+    private JButton back;
 
     /**
     * MenuJugar: Constructor de menú jugar, pide un título que será el título de la ventana creada.
     * La función llama al constructor de JFrame a través de "super(title)"
-    * DOM: String (title)
-    * REC: MenuJugar
+    * <p>
+    * @param title Título de la ventana a crear.
+    * <p>
+    * @return MenuJugar
+    * @see MainMenu Menú Principal
     */
     public MenuJugar(String title) {
         super(title);
