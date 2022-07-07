@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.GUI.MenuCards">
-  <grid id="27dc6" binding="panelCards" layout-manager="GridLayoutManager" row-count="8" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panelCards" layout-manager="GridLayoutManager" row-count="15" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="800" height="600"/>
@@ -11,11 +11,11 @@
       <minimumSize width="800" height="600"/>
       <preferredSize width="800" height="600"/>
     </properties>
-    <border type="none"/>
+    <border type="none" title="l"/>
     <children>
       <component id="d71b8" class="javax.swing.JLabel" binding="texto1">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-1"/>
@@ -25,7 +25,7 @@
       </component>
       <component id="e1cd7" class="javax.swing.JButton" binding="crearMazoButton">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Crear mazo de cartas"/>
@@ -33,7 +33,7 @@
       </component>
       <component id="ab598" class="javax.swing.JButton" binding="back">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Atrás"/>
@@ -41,7 +41,7 @@
       </component>
       <component id="e4953" class="javax.swing.JButton" binding="agregarCartasButton">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Agregar cartas al mazo"/>
@@ -49,7 +49,7 @@
       </component>
       <component id="faf76" class="javax.swing.JButton" binding="verifyButton">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Verificar validez del mazo"/>
@@ -57,7 +57,7 @@
       </component>
       <component id="e0d" class="javax.swing.JButton" binding="missingCardsButton">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Cartas que faltan en el mazo"/>
@@ -65,7 +65,7 @@
       </component>
       <vspacer id="21bc4">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="8" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="200"/>
             <preferred-size width="-1" height="250"/>
             <maximum-size width="-1" height="250"/>
@@ -74,21 +74,33 @@
       </vspacer>
       <vspacer id="62198">
         <constraints>
-          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="100"/>
             <maximum-size width="-1" height="150"/>
           </grid>
         </constraints>
       </vspacer>
-      <hspacer id="44a14">
+      <component id="25182" class="javax.swing.JLabel" binding="label21">
         <constraints>
-          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
         </constraints>
-      </hspacer>
-      <component id="cce4" class="javax.swing.JLabel" binding="mazoActual">
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="5ce7a" class="javax.swing.JLabel" binding="mazoActual">
         <constraints>
-          <grid row="0" column="1" row-span="7" col-span="1" vsize-policy="6" hsize-policy="7" anchor="8" fill="2" indent="1" use-parent-layout="false">
-            <preferred-size width="500" height="500"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
             <maximum-size width="500" height="-1"/>
           </grid>
         </constraints>
@@ -99,6 +111,431 @@
           <name value=""/>
           <requestFocusEnabled value="true"/>
           <text value="Mazo Actual:"/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="7a768" class="javax.swing.JLabel" binding="label3">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="cce4" class="javax.swing.JLabel" binding="label6">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="974cd" class="javax.swing.JLabel" binding="label12">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="bb938" class="javax.swing.JLabel" binding="label15">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="fbb9d" class="javax.swing.JLabel" binding="label16">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="56948" class="javax.swing.JLabel" binding="label22">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="b42f3" class="javax.swing.JLabel" binding="label19">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="c00e" class="javax.swing.JLabel" binding="label13">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="b151d" class="javax.swing.JLabel" binding="label7">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="e70e5" class="javax.swing.JLabel" binding="label4">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="54a3e" class="javax.swing.JLabel" binding="label1">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="18a06" class="javax.swing.JLabel" binding="label18">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="18afe" class="javax.swing.JLabel" binding="label24">
+        <constraints>
+          <grid row="8" column="1" row-span="7" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="fcfa0" class="javax.swing.JLabel" binding="label25">
+        <constraints>
+          <grid row="8" column="2" row-span="7" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="3ec10" class="javax.swing.JLabel" binding="label8">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="f77e0" class="javax.swing.JLabel" binding="label5">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="2de38" class="javax.swing.JLabel" binding="label2">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="bcac2" class="javax.swing.JLabel" binding="label11">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="69aac" class="javax.swing.JLabel" binding="label10">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="ddc3" class="javax.swing.JLabel" binding="label9">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="81b20" class="javax.swing.JLabel" binding="label14">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="c51be" class="javax.swing.JLabel" binding="label17">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="ed83c" class="javax.swing.JLabel" binding="label20">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="c90c5" class="javax.swing.JLabel" binding="label23">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="466b8" class="javax.swing.JLabel" binding="label26">
+        <constraints>
+          <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="7" anchor="9" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+            <maximum-size width="500" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="11"/>
+          <name value=""/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
           <verticalAlignment value="0"/>
         </properties>
       </component>

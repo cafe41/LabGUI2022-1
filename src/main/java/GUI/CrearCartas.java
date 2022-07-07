@@ -33,19 +33,19 @@ public class CrearCartas extends JFrame{
         this.setContentPane(panelCrearCarta);
         this.pack();
 
-        this.game = game;
+        CrearCartas.game = game;
         generarMazoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int numE = Integer.valueOf(numeroElementos.getText());
-                int maxC = Integer.valueOf(cantidadCartas.getText());
+                int numE = Integer.parseInt(numeroElementos.getText());
+                int maxC = Integer.parseInt(cantidadCartas.getText());
                 List<String> listaElementos = new ArrayList<>();
 
                 if (maxC == -1){
                     maxC = (numE -1)*(numE -1) + (numE -1) + 1;
                 }
 
-                if (randomButton.isSelected() == true) {
+                if (randomButton.isSelected()) {
                     int cantE = (numE -1)*(numE -1) + (numE -1) + 1 + 1; //+1 porque no cuenta el 0
                     Random numeroRandom = new Random();
                     for (int i = 0; i < cantE;) {
@@ -74,8 +74,14 @@ public class CrearCartas extends JFrame{
         randomButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                elementsText.setVisible(false);
-                elementos.setVisible(false);
+                if (elementos.isVisible()) {
+                    elementsText.setVisible(false);
+                    elementos.setVisible(false);
+                }
+                else {
+                    elementsText.setVisible(true);
+                    elementos.setVisible(true);
+                }
             }
         });
     }
