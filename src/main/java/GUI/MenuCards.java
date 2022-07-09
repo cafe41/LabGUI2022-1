@@ -5,45 +5,17 @@ import main.java.Dobble.game.DobbleGame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MenuCards extends JFrame{
     private JPanel panelCards;
     private JLabel texto1;
     private JButton crearMazoButton;
     private JButton back;
-    private JLabel label6;
     private JButton agregarCartasButton;
     private JButton verifyButton;
     private JButton missingCardsButton;
-    private JLabel mazoActual;
-    private JLabel label1;
-    private JLabel label2;
-    private JLabel label3;
-    private JLabel label4;
-    private JLabel label5;
-    private JLabel label7;
-    private JLabel label8;
-    private JLabel label9;
-    private JLabel label10;
-    private JLabel label11;
-    private JLabel label12;
-    private JLabel label13;
-    private JLabel label14;
-    private JLabel label15;
-    private JLabel label16;
-    private JLabel label17;
-    private JLabel label18;
-    private JLabel label19;
-    private JLabel label20;
-    private JLabel label21;
-    private JLabel label22;
-    private JLabel label23;
-    private JLabel label24;
-    private JLabel label25;
-    private JLabel label26;
-    private final List<JLabel> listaLabel;
+    public JLabel mazoActual;
+    private JScrollBar scrollBar1;
 
     public static DobbleGame game;
 
@@ -63,20 +35,11 @@ public class MenuCards extends JFrame{
 
         MenuCards.game = game;
 
-        this.listaLabel = new ArrayList<>();
-        listaLabel.add(label1); listaLabel.add(label2); listaLabel.add(label3); listaLabel.add(label4);
-        listaLabel.add(label5); listaLabel.add(label6); listaLabel.add(label7); listaLabel.add(label8);
-        listaLabel.add(label9); listaLabel.add(label10); listaLabel.add(label11); listaLabel.add(label12);
-        listaLabel.add(label13); listaLabel.add(label14); listaLabel.add(label15); listaLabel.add(label16);
-        listaLabel.add(label17); listaLabel.add(label18); listaLabel.add(label19); listaLabel.add(label20);
-        listaLabel.add(label21); listaLabel.add(label22); listaLabel.add(label23); listaLabel.add(label24);
-        listaLabel.add(label25); listaLabel.add(label26);
-
         if (game.getMazoCartas() != null) {
             updateCardsSet();
         }
         else{
-            label1.setText("null");
+            mazoActual.setText("Mazo Actual: null");
         }
 
         crearMazoButton.addActionListener(new ActionListener() {
@@ -92,10 +55,35 @@ public class MenuCards extends JFrame{
                 frame1.setVisible(true);
             }
         });
+        agregarCartasButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame2;
+                if(game.getMazoCartas() != null) {
+                    frame2 = new AgregarCartas("Agregar Cartas", game);
+                }
+                else{
+                    frame2 = new genericText("Error", "No posee un mazo.");
+                }
+                frame2.setVisible(true);
+            }
+        });
+        verifyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        missingCardsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateCardsSet();
+                if(game.getMazoCartas() != null){updateCardsSet();}
                 JFrame frame = new MainMenu("Menú Principal", game);
                 frame.setVisible(true);
                 dispose();
@@ -104,15 +92,11 @@ public class MenuCards extends JFrame{
     }
 
     public void updateCardsSet(){
-        if (game.getMazoCartas().getCardsSet().size() > 26) { //solo mostrará hasta 26
-            for (int i = 0; i < 26; i++) {
-                listaLabel.get(i).setText(game.getMazoCartas().getCardsSet().get(i).toString());
-            }
+        StringBuilder acum = new StringBuilder("<html> Mazo de Cartas:<br/>");
+        for (int i = 1; i <= game.getMazoCartas().getCantMaxCartas(); i++) {
+            acum.append(game.getMazoCartas().getCardsSet().get(i-1).toString()).append(" ");
         }
-        else {
-            for (int i = 0; i < game.getMazoCartas().getCardsSet().size(); i++) {
-                listaLabel.get(i).setText(game.getMazoCartas().getCardsSet().get(i).toString());
-            }
-        }
+        acum.append("</html>");
+        mazoActual.setText(acum.toString());
     }
 }

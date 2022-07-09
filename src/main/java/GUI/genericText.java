@@ -21,7 +21,7 @@ public class genericText extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                dispose();
             }
         });
     }

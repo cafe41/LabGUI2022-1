@@ -29,11 +29,11 @@ public class CrearCartas extends JFrame{
     public CrearCartas(String title, DobbleGame game) {
         super(title);
 
-        this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(panelCrearCarta);
         this.pack();
 
-        CrearCartas.game = game;
+        AgregarCartas.game = game;
         generarMazoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
