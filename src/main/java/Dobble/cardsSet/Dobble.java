@@ -114,11 +114,9 @@ public class Dobble {
         }
         //Tercera parte: comprueba que no quede nada en la lista, si queda retornará false, sino true
         if (listaElementos.size() == 0) {
-            System.out.println("El conjunto de cartas es válido\n");
             return true;
         }
         else {
-            System.out.println("El conjunto de cartas no es válido\n");
             return false;
         }
     }
@@ -142,7 +140,7 @@ public class Dobble {
                 "cantMaxCartas = " + cantMaxCartas + "\n";
     }
 
-    //recortarSet, método que toma el Dobble.cardsSet y le resta "n" cantidad de elementos, para que cumpla cierto largo
+    //recortarSet, método que toma el Dobble.cardsSet y agrega "n" cantidad de elementos a otro cardsSet, para que cumpla cierto largo
     //DOM: int
     //REC: List<Card>
     public List<Card> recortarSet(int n){
@@ -182,7 +180,7 @@ public class Dobble {
         Card carta2 = getCardsSet().get(n2);
         for (int i = 0; i < carta1.getCarta().size() ;i++){
             if (carta2.getCarta().contains(carta1.getElemento(i)))
-            return carta1.getElemento(i);
+                return carta1.getElemento(i);
         }
         return null;
     }

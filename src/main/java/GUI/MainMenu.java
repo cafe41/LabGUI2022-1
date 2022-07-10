@@ -1,6 +1,10 @@
 package main.java.GUI;
 
 import main.java.Dobble.game.DobbleGame;
+import main.java.GUI.MenuCartas.MenuCards;
+import main.java.GUI.MenuJugador.MenuPlayer;
+import main.java.GUI.MenuJugar.MenuPlay;
+import main.java.GUI.MenuStatus.MenuStatus;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,6 +18,8 @@ public class MainMenu extends JFrame {
     private JButton crearMazoButton;
     private JLabel fondoDerecho;
     private JLabel fondoIzquierdo;
+    private JLabel fondoArriba;
+    private JLabel fondoBottom;
 
     public static DobbleGame game;
 
@@ -23,7 +29,7 @@ public class MainMenu extends JFrame {
      * La función llama al constructor de JFrame a través de "super(title)"
      * <p>
      * @param title Título de la ventana a crear.
-     * @see MenuJugar Menú Jugar
+     * @see MenuPlay Menú Jugar
      * @see MenuPlayer Menú para añadir/editar un jugador
      * @see MenuCards Menú para editar el mazo
      * @see MenuStatus Menú del estado del juego
@@ -40,7 +46,7 @@ public class MainMenu extends JFrame {
         jugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new MenuJugar("Menú Jugar");
+                JFrame frame1 = new MenuPlay("Menú Jugar", game);
                 frame1.setVisible(true);
                 dispose();
             }
@@ -56,7 +62,7 @@ public class MainMenu extends JFrame {
         agregarJugadoresButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame3 = new MenuPlayer("Menú Jugadores");
+                JFrame frame3 = new MenuPlayer("Menú Jugadores", game);
                 frame3.setVisible(true);
                 dispose();
             }
@@ -64,7 +70,7 @@ public class MainMenu extends JFrame {
         estadoActualButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame4 = new MenuStatus("Menú Estado");
+                JFrame frame4 = new MenuStatus("Menú Estado", game);
                 frame4.setVisible(true);
                 dispose();
             }
@@ -76,7 +82,7 @@ public class MainMenu extends JFrame {
      * <p>
      * @param title Título de la ventana a crear.
      * @param game DobbleGame que se "pasa" entre menus y botones.
-     * @see MenuJugar Menú Jugar
+     * @see MenuPlay Menú Jugar
      * @see MenuPlayer Menú para añadir/editar un jugador
      * @see MenuCards Menú para editar el mazo
      * @see MenuStatus Menú del estado del juego
@@ -93,7 +99,7 @@ public class MainMenu extends JFrame {
         jugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new MenuJugar("Menú Jugar");
+                JFrame frame1 = new MenuPlay("Menú Jugar", game);
                 frame1.setVisible(true);
                 dispose();
             }
@@ -109,7 +115,7 @@ public class MainMenu extends JFrame {
         agregarJugadoresButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame3 = new MenuPlayer("Menú Jugadores");
+                JFrame frame3 = new MenuPlayer("Menú Jugadores", game);
                 frame3.setVisible(true);
                 dispose();
             }
@@ -117,7 +123,7 @@ public class MainMenu extends JFrame {
         estadoActualButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame4 = new MenuStatus("Menú Estado");
+                JFrame frame4 = new MenuStatus("Menú Estado", game);
                 frame4.setVisible(true);
                 dispose();
             }
@@ -125,16 +131,11 @@ public class MainMenu extends JFrame {
     }
     /**Método main donde llamaremos las interfaces gráficas definidas previamente.
      * <p>
-     * @param args
+     * @param args argumentos del main
      */
     public static void main(String[] args) {
         JFrame frame = new MainMenu("Menú Principal");
         frame.setVisible(true);
-
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }
 

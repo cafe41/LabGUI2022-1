@@ -308,7 +308,11 @@ public class Menu {
     private void optionVerificarSet(DobbleGame game){
         System.out.println("-Bienvenido al programa para verificar que el mazo es válido-\n");
         //Verificamos que el set de cartas sea válido
-        game.getMazoCartas().dobbleValido();
+        if (game.getMazoCartas().dobbleValido()){
+            System.out.println("El conjunto de cartas es válido\n");
+        }
+        else {System.out.println("El conjunto de cartas no es válido\n");}
+
     }
     //cartasFaltantes, ejecuta missingCards, quien muestra las cartas faltantes en el mazo
     private void optionCartasFaltantes(DobbleGame game){

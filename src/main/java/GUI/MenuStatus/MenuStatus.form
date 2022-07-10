@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.GUI.MenuStatus.MenuStatus">
+  <grid id="27dc6" binding="panelStatus" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+      <maximumSize width="3840" height="2160"/>
+      <minimumSize width="800" height="600"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="29921" class="javax.swing.JLabel" binding="texto1">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Por favor, seleccione una opción:"/>
+        </properties>
+      </component>
+      <component id="84da1" class="javax.swing.JButton" binding="estadoDelMazoButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Estado del mazo de cartas"/>
+        </properties>
+      </component>
+      <component id="9dc84" class="javax.swing.JButton" binding="back">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Atrás"/>
+        </properties>
+      </component>
+      <component id="d6b94" class="javax.swing.JButton" binding="estadoJugadoresButton">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Estado de los jugadores"/>
+        </properties>
+      </component>
+      <component id="9bc66" class="javax.swing.JButton" binding="estadoPartidaButton">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Estado de la partida actual"/>
+        </properties>
+      </component>
+      <component id="5f1b6" class="javax.swing.JLabel" binding="fondoArriba">
+        <constraints>
+          <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="200"/>
+            <preferred-size width="200" height="400"/>
+            <maximum-size width="200" height="400"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/200x400 FA MS.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e2b7e" class="javax.swing.JLabel" binding="fondoDerechoArriba">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="300"/>
+            <maximum-size width="300" height="300"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/300x300 FDA MS.jpg"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <scrollpane id="6457a" binding="scrollPanePartida">
+        <constraints>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="5" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="300"/>
+            <maximum-size width="300" height="300"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="48829" class="javax.swing.JLabel" binding="statusPartidaActual">
+            <constraints/>
+            <properties>
+              <foreground color="-1"/>
+              <text value="&lt;html&gt;Partida Actual&lt;/html&gt;"/>
+              <verticalAlignment value="1"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="b8182" binding="scrollPaneJugadores">
+        <constraints>
+          <grid row="1" column="1" row-span="7" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="300"/>
+            <maximum-size width="300" height="300"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="a363" class="javax.swing.JLabel" binding="statusJugadores">
+            <constraints/>
+            <properties>
+              <enabled value="true"/>
+              <foreground color="-1"/>
+              <horizontalAlignment value="2"/>
+              <horizontalTextPosition value="2"/>
+              <text value="&lt;html&gt;Jugadores Actuales:&lt;/html&gt;"/>
+              <verticalAlignment value="1"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="53cbf" binding="scrollPaneCartas">
+        <constraints>
+          <grid row="2" column="2" row-span="6" col-span="1" vsize-policy="7" hsize-policy="7" anchor="6" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="300" height="300"/>
+            <maximum-size width="300" height="300"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="c76b3" class="javax.swing.JLabel" binding="statusMazoCartas">
+            <constraints/>
+            <properties>
+              <foreground color="-1"/>
+              <text value="&lt;html&gt;Mazo Actual:&lt;/html&gt;"/>
+              <verticalAlignment value="1"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

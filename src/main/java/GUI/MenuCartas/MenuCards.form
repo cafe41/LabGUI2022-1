@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.GUI.MenuCartas.MenuCards">
+  <grid id="27dc6" binding="panelCards" layout-manager="GridLayoutManager" row-count="9" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="800" height="600"/>
+    </constraints>
+    <properties>
+      <background color="-16777216"/>
+      <maximumSize width="3840" height="2160"/>
+      <minimumSize width="800" height="600"/>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none" title=""/>
+    <children>
+      <component id="d71b8" class="javax.swing.JLabel" binding="texto1">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <maximum-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <text value="Por favor, seleccione una opción:"/>
+        </properties>
+      </component>
+      <component id="e1cd7" class="javax.swing.JButton" binding="crearMazoButton">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Crear mazo de cartas"/>
+        </properties>
+      </component>
+      <component id="ab598" class="javax.swing.JButton" binding="back">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Atrás"/>
+        </properties>
+      </component>
+      <component id="e4953" class="javax.swing.JButton" binding="agregarCartasButton">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Agregar cartas al mazo"/>
+        </properties>
+      </component>
+      <component id="faf76" class="javax.swing.JButton" binding="verifyButton">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Verificar validez del mazo"/>
+        </properties>
+      </component>
+      <component id="e0d" class="javax.swing.JButton" binding="missingCardsButton">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Cartas que faltan en el mazo"/>
+        </properties>
+      </component>
+      <component id="d7268" class="javax.swing.JLabel" binding="fondoArriba">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="200"/>
+            <preferred-size width="200" height="250"/>
+            <maximum-size width="-1" height="250"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/200x250 FA MC.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="3c8a3" class="javax.swing.JLabel" binding="fondoBottom">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="10" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+            <preferred-size width="200" height="150"/>
+            <maximum-size width="-1" height="150"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/200x150 FB MC.jpg"/>
+          <text value=""/>
+          <verticalAlignment value="3"/>
+        </properties>
+      </component>
+      <component id="655dc" class="javax.swing.JButton" binding="quitarCartasButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Quitar cartas al mazo"/>
+        </properties>
+      </component>
+      <scrollpane id="1318e" binding="scrollPane">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="aa962" class="javax.swing.JLabel" binding="mazoActual">
+            <constraints/>
+            <properties>
+              <autoscrolls value="true"/>
+              <foreground color="-1"/>
+              <horizontalAlignment value="2"/>
+              <horizontalTextPosition value="11"/>
+              <name value=""/>
+              <requestFocusEnabled value="true"/>
+              <text value="Mazo Actual:"/>
+              <verticalAlignment value="1"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="509cb" class="javax.swing.JLabel" binding="fondoDerecho">
+        <constraints>
+          <grid row="1" column="1" row-span="8" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="main/java/GUI/JPG/600x350 FDB MC.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
