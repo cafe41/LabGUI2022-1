@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.java.GUI.MenuJugar.MenuPlay">
-  <grid id="27dc6" binding="panelJugar" layout-manager="GridLayoutManager" row-count="10" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panelJugar" layout-manager="GridLayoutManager" row-count="10" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="800" height="600"/>
@@ -16,7 +16,10 @@
     <children>
       <component id="7c79d" class="javax.swing.JButton" binding="modoContrarrelojPvPButton" default-binding="true">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Modo Contrarreloj PvP"/>
@@ -24,7 +27,10 @@
       </component>
       <component id="4d37b" class="javax.swing.JButton" binding="modoCooperativoVsIAButton" default-binding="true">
         <constraints>
-          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Modo Cooperativo vs IA"/>
@@ -32,7 +38,10 @@
       </component>
       <component id="cb240" class="javax.swing.JButton" binding="modoCompetitivoPvPButton" default-binding="true">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Modo Competitivo PvP"/>
@@ -40,15 +49,21 @@
       </component>
       <component id="3df5c" class="javax.swing.JButton" binding="modoContrarrelojButton" default-binding="true">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
-          <text value="Modo contrarreloj"/>
+          <text value="Modo Contrarreloj"/>
         </properties>
       </component>
       <component id="41b1a" class="javax.swing.JButton" binding="modoVsIAButton" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Modo vs IA"/>
@@ -56,7 +71,10 @@
       </component>
       <component id="b057b" class="javax.swing.JButton" binding="modoDePruebaButton" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Modo de Prueba"/>
@@ -64,44 +82,68 @@
       </component>
       <component id="b7f5a" class="javax.swing.JLabel" binding="texto1">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="210" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <background color="-1"/>
           <foreground color="-1"/>
-          <text value="Por favor, seleccione un modo de juego:"/>
+          <horizontalAlignment value="0"/>
+          <text value="Seleccione un modo de juego:"/>
         </properties>
       </component>
-      <hspacer id="c4ac4">
+      <component id="411aa" class="javax.swing.JLabel" binding="fondoDerecho">
         <constraints>
-          <grid row="1" column="1" row-span="8" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="10" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="600" height="600"/>
+            <maximum-size width="600" height="-1"/>
+          </grid>
         </constraints>
-      </hspacer>
+        <properties>
+          <icon value="main/java/GUI/JPG/600x600 FD MP.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
       <component id="16727" class="javax.swing.JButton" binding="back">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="25"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Atrás"/>
         </properties>
       </component>
-      <vspacer id="ad0d6">
+      <component id="3a5eb" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="9" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="-1" height="200"/>
-            <preferred-size width="-1" height="250"/>
-            <maximum-size width="-1" height="250"/>
+            <preferred-size width="200" height="250"/>
+            <maximum-size width="200" height="250"/>
           </grid>
         </constraints>
-      </vspacer>
-      <vspacer id="3cbde">
+        <properties>
+          <icon value="main/java/GUI/JPG/200x250 FA MP.jpg"/>
+          <text value=""/>
+          <verticalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="b9e98" class="javax.swing.JLabel" binding="fondoBottom">
         <constraints>
-          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <minimum-size width="-1" height="100"/>
-            <maximum-size width="-1" height="150"/>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="10" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="50"/>
+            <preferred-size width="200" height="100"/>
+            <maximum-size width="210" height="150"/>
           </grid>
         </constraints>
-      </vspacer>
+        <properties>
+          <icon value="main/java/GUI/JPG/200x100 FB MP.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

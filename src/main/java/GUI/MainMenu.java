@@ -46,9 +46,16 @@ public class MainMenu extends JFrame {
         jugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new MenuPlay("Menú Jugar", game);
-                frame1.setVisible(true);
-                dispose();
+                if (game.getMazoCartas() == null || game.getJugadores().size() < 1) {
+                    JFrame frame1 = new genericText("Error",
+                            "<html>Necesita un mazo y jugadores para jugar</html>");
+                    frame1.setVisible(true);
+                }
+                else {
+                    JFrame frame1 = new MenuPlay("Menú Jugar", game);
+                    frame1.setVisible(true);
+                    dispose();
+                }
             }
         });
         crearMazoButton.addActionListener(new ActionListener() {
@@ -99,9 +106,16 @@ public class MainMenu extends JFrame {
         jugarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame1 = new MenuPlay("Menú Jugar", game);
-                frame1.setVisible(true);
-                dispose();
+                if (game.getMazoCartas() == null) {
+                    JFrame frame1 = new genericText("Error",
+                            "<html>Necesita un mazo para jugar</html>");
+                    frame1.setVisible(true);
+                }
+                else {
+                    JFrame frame1 = new MenuPlay("Menú Jugar", game);
+                    frame1.setVisible(true);
+                    dispose();
+                }
             }
         });
         crearMazoButton.addActionListener(new ActionListener() {
@@ -138,5 +152,3 @@ public class MainMenu extends JFrame {
         frame.setVisible(true);
     }
 }
-
-

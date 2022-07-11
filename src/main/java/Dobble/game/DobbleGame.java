@@ -71,6 +71,14 @@ public class DobbleGame {
         return listaPuntajes;
     }
 
+    //getJugadorActual, método que devuelve el Player con el turno actual
+    //DOM: void
+    //REC: Player
+    public Player getJugadorActual(){
+        Player jugadorActual = getJugadores().get(getTurnoActual());
+        return jugadorActual;
+    }
+
     //puntajeMayor, método que obtiene el mayor de los puntajes
     //DOM: void
     //REC: Integer
@@ -97,6 +105,27 @@ public class DobbleGame {
             }
         }
         return vaGanando;
+    }
+
+    //eliminarCPUs, método que elimina todas las CPU de los jugadores
+    //DOM: void
+    //REC: void
+    public void eliminarCPUS(){
+        for (int i = 0; i < getJugadores().size();i++) {
+            if (getJugadores().get(i).isCPU()){
+                getJugadores().remove(i);
+                i--;
+            }
+        }
+    }
+
+    //limpiarPuntajes, método que restablece los puntajes a 0
+    //DOM: void
+    //REC: void
+    public void limpiarPuntajes(){
+        for (int i = 0; i < getJugadores().size(); i++) {
+            getJugadores().get(i).setPuntaje(0);
+        }
     }
 
     @Override

@@ -15,4 +15,7 @@ public interface Player {
     boolean isCPU();
     int getPuntaje();
     List<Card> getMano();
+
+    //Setters
+    void setPuntaje(int puntaje);
 }

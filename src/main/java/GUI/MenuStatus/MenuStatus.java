@@ -2,6 +2,8 @@ package main.java.GUI.MenuStatus;
 
 import main.java.Dobble.game.DobbleGame;
 import main.java.GUI.MainMenu;
+import main.java.GUI.MenuCartas.MenuCards;
+import main.java.GUI.MenuJugador.MenuPlayer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,19 +14,18 @@ public class MenuStatus extends JFrame{
 
 
     private JPanel panelStatus;
-    private JLabel texto1;
     private JButton estadoDelMazoButton;
     private JButton back;
     private JButton estadoJugadoresButton;
     private JButton estadoPartidaButton;
     private JLabel fondoArriba;
     private JLabel fondoDerechoArriba;
-    private JLabel statusPartidaActual;
-    private JLabel statusMazoCartas;
     private JScrollPane scrollPaneCartas;
     private JScrollPane scrollPaneJugadores;
     private JScrollPane scrollPanePartida;
     private JLabel statusJugadores;
+    private JLabel statusPartidaActual;
+    private JLabel statusMazoCartas;
 
     public DobbleGame game;
     private JPanel panel1;
@@ -49,24 +50,10 @@ public class MenuStatus extends JFrame{
         scrollPaneJugadores.getViewport().setBackground(Color.black);
         scrollPanePartida.getViewport().setBackground(Color.black);
 
-        estadoDelMazoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        updateCardsSet();
+        MenuPlayer.actualizarTexto(game.getJugadores(),statusJugadores);
+        updateGameStatus();
 
-            }
-        });
-        estadoJugadoresButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        estadoPartidaButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -75,5 +62,47 @@ public class MenuStatus extends JFrame{
                 dispose();
             }
         });
+    }
+
+    /**
+     * Método que actualiza el texto del label que muestra el set de cartas
+     */
+    public void updateCardsSet(){
+        if (game.getMazoCartas() != null) {
+            StringBuilder acum = new StringBuilder("<html> Mazo de Cartas:<br/>");
+            for (int i = 1; i <= game.getMazoCartas().getCardsSet().size(); i++) {
+                acum.append(game.getMazoCartas().getCardsSet().get(i - 1).toString()).append(" ");
+            }
+            acum.append("</html>");
+            statusMazoCartas.setText(acum.toString());
+        }
+        else{
+            statusMazoCartas.setText("Mazo Actual: null");
+        }
+    }
+
+    /**
+     * Método que actualiza el texto del label que muestra el estado del juego
+     */
+    public void updateGameStatus(){
+        String acum = "<html>Partida Actual:<br/>";
+        if (game.getModoDeJuego() == null){
+            if(game.getJugadores().size() == 0){
+                acum = acum + "No hay jugadores.<br/>";
+            }
+            if(game.getMazoCartas() == null){
+                acum = acum + "No hay un mazo de cartas.<br/>";
+            }
+            acum = acum + "La partida aún no ha empezado.<br/>";
+        }
+        else {
+            acum = "<html> En la partida:" +
+                    "<br/>Es el turno de: " + game.getJugadorActual().getUser() +
+                    "<br/>Los puntajes son: " + game.getPuntajes() +
+                    "<br/>" + game.vaGanando() + " va ganando, con " + game.puntajeMayor()
+                    + " puntos." + "<br/>El modo de juego es: " + game.getModoDeJuego()
+                    + ".<br/></html>";
+        }
+        statusPartidaActual.setText(acum);
     }
 }

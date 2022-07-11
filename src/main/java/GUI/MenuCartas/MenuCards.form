@@ -116,19 +116,26 @@
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <horizontalScrollBarPolicy value="30"/>
+          <verticalScrollBarPolicy value="20"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="aa962" class="javax.swing.JLabel" binding="mazoActual">
             <constraints/>
             <properties>
-              <autoscrolls value="true"/>
+              <autoscrolls value="false"/>
               <foreground color="-1"/>
               <horizontalAlignment value="2"/>
               <horizontalTextPosition value="11"/>
+              <labelFor value="1318e"/>
+              <maximumSize width="-1" height="16"/>
+              <minimumSize width="37" height="16"/>
               <name value=""/>
+              <preferredSize width="500" height="16"/>
               <requestFocusEnabled value="true"/>
-              <text value="Mazo Actual:"/>
+              <text value="&lt;html&gt;Mazo Actual:&lt;/html&gt;"/>
               <verticalAlignment value="1"/>
             </properties>
           </component>
